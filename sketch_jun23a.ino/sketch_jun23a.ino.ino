@@ -1,4 +1,4 @@
-int del = 0;
+int del = 1;
 void setup() {
   pinMode(A0, INPUT);
   pinMode(10, OUTPUT);

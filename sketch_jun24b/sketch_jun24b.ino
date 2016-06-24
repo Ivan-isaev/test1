@@ -11,7 +11,8 @@ void loop() {
   int angle = map(val, 0, 1023, 0, 179);
   if (angle != x){
     int y = angle - x;
-    myservo.attach(y);
+    myservo.attach(A1);
+    myservo.write(angle);
   }
   x = angle;
 }

@@ -1,9 +1,12 @@
 #include <Servo.h>
-int x = 0;
+
 Servo myservo;
+int x = 0;
+
 void setup() {
   pinMode(A0,INPUT);
   pinMode(A1,OUTPUT);
+  myservo.attach(A1);
 }
 
 void loop() {
@@ -11,7 +14,6 @@ void loop() {
   int angle = map(val, 0, 1023, 0, 179);
   if (angle != x){
     int y = angle - x;
-    myservo.attach(A1);
     myservo.write(angle);
   }
   x = angle;
